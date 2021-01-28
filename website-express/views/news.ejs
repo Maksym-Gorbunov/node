@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NodeJS Website</title>
+    <style>
+        body{
+            background-color: blueviolet;
+        }
+        h1{
+            color: brown;
+        }
+    </style>
+</head>
+<body>
+    <%- include ('components/header') -%>
+
+    <h1>News Page</h1>
+   
+    <p>Request params:</p>
+    <p>Name: <%= params.name %></p>
+    <p>Age: <%= params.age %></p>
+    
+    <p>Model: <%= data.model %></p>
+    <p>Age: <%= data.age %></p>    
+    <p>Owners:</p>
+    <ul>
+        <% data.owners.forEach(function(owner){ %>
+            <li><%= owner %></li>
+        <% }) %>
+    </ul>
+
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est vel voluptatibus quas dolorum praesentium cupiditate consequatur libero minus, dolores qui adipisci magnam dolor fugit quam repellat, iusto reiciendis? Accusamus ipsum tenetur earum porro vero illo voluptates quas nesciunt eius exercitationem. Minima ipsa excepturi, fuga consequuntur illum porro aperiam quo voluptatum!</p>
+</body>
+</html>
